@@ -26,40 +26,41 @@ community. It works for my purposes, but to make it work for *your* purposes,
 I'm hoping you'll help by collaborating on some of the polish that makes it
 useful outside my own .emacs file :)
 
-***** TODO package as a proper emacs package
-***** TODO write tests
-***** TODO allow customization (via match syntax?) of kanban state sources
-      Should we also allow the user to designate which items represent specific
-      states with potentially special meaning, such as "done"?
-***** TODO log timestamps when refiling
-      Log as properties to allow sorting lists based on how long the item has been sitting in that queue.
-***** TODO log refile count to track "churn"
-      Items that bounce around a lot are good candidates for review.
-***** TODO allow setting WIP constraints for each state
-      "Capacity" could be a property set on the headings used for each state.
+- [ ] Package as a proper emacs package.
 
-      We can bounce attempts to refile into an over-capacity state easily enough.
+- [ ] Write tests.
 
-      Stopping user from manually creating items in an over-capacity state could be more difficult.
-***** TODO calculate velocity
-      Given an org file with the right properties and history, we can calculate
-      statistics for the user. These could include many interesting queueing measurements, such as:
+- [ ] Allow custom Kanban states using org-agenda match syntax.
 
-      - average wait time via Little's Law
-      - capacity utilization
-***** TODO backlog focus mode
-      Special mode that helps users triage large backlogs. This could
-      incorporate multiple views of the same "state" subtree, each sorted /
-      grouped in a different way.
+- [X] Log timestamps as properties when refiling.
 
-      For instance, one might wish to see:
+- [ ] Log refile count to track "churn".
 
-      - all items sorted by last refile time.
-      - all items sorted by priority.
-      - items grouped by the week/month that they were refiled.
-      - items grouped by some arbitrary tag, then sorted by priority and refile time.
-      - some kind of "smart" weighted list that considers priority, refile time, churn, tags, etc?
-***** TODO support multi-person kanban boards
+  Items that bounce around a lot are good candidates for review.
+
+- [ ] Allow setting WIP constraints for each state.
+- [ ] Velocity visualization.
+
+  Given an org file with the right properties and history, we can calculate
+  statistics for the user. These could include many interesting queueing
+  measurements, such as average wait time via Little's Law, and capacity
+  utilization.
+
+- [ ] Backlog focus mode.
+
+  Special mode that helps users triage large backlogs. This could incorporate
+  multiple views of the same "state" subtree, each sorted / grouped in a
+  different way.
+
+  For instance, one might wish to see:
+
+  - all items sorted by last refile time.
+  - all items sorted by priority.
+  - items grouped by the week/month that they were refiled.
+  - items grouped by some arbitrary tag, then sorted by priority and refile time.
+  - some kind of "smart" weighted list that considers priority, refile time, churn, tags, etc?
+
+- [ ] Support multi-person kanban boards.
 
 ** Resources
 

@@ -50,10 +50,14 @@
       (org-cycle)
       (org-cycle))))
 
+
 (defun org-kanban--around-org-refile (orig-fun &rest args)
   "Overrides for refile"
   (save-excursion
     (save-selected-window
+
+      (org-entry-put nil "REFILE_TIME" (format-time-string (org-time-stamp-format 'long nil)))
+
       (apply orig-fun args)
       (when (local-variable-p 'kanban-heading)
         (cl-loop for w in (window-list) do
