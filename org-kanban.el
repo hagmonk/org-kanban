@@ -52,14 +52,13 @@
 
 (defun org-kanban--around-org-refile (orig-fun &rest args)
   "Overrides for refile"
-  (apply orig-fun args)
-  (when
-      ;;(equal "kanban.org" (buffer-name (buffer-base-buffer)))
-      (local-variable-p 'kanban-heading)
-
-    (cl-loop for w in (window-list) do
-             (select-window w)
-             (org-kanban-refresh))))
+  (save-excursion
+    (save-selected-window
+      (apply orig-fun args)
+      (when (local-variable-p 'kanban-heading)
+        (cl-loop for w in (window-list) do
+                 (select-window w)
+                 (org-kanban-refresh))))))
 
 (defun org-kanban--init-window (states)
   "Sets up window splits based on the states provided. Sets
