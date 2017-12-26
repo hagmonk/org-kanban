@@ -1,0 +1,45 @@
+* org-kanban
+
+The start of what might eventually be a useful personal kanban mode for org. *Warning:
+not even alpha software!*
+
+[[file:screenshot.png][file:screenshot.png]]
+
+** About
+
+This package contains a single useful function, `org-kanban`, that lets you open
+several editing windows into the same org-mode file, so that it can be
+visualized as a kanban board.
+
+The function is currently hard coded to look for the first top level heading,
+and treat all direct children of that heading as the "states" of your kanban
+board.
+
+`org-refile-targets` is overridden in this buffer, so that refile actions are
+focused on moving items between the different states.
+
+** Help
+
+This is obviously an incredibly limited tool at the present, and I'm really just
+releasing it so prematurely in order to solicit feedback and help from the
+community. It works for my purposes, but to make it work for *your* purposes,
+I'm hoping you'll help by collaborating on some of the polish that makes it
+useful outside my own .emacs file :)
+
+*** TODO package as a proper emacs package
+*** TODO write tests
+*** TODO allow customization (via match syntax?) of kanban state sources
+*** TODO log timestamps when refiling
+*** TODO allow setting WIP constraints for each state
+*** TODO calculate velocity
+*** TODO support multi-person kanban boards
+
+** Resources
+
+Interested in project management, kanban, and all that good stuff?
+
+*** [[https://www.amazon.com/Principles-Product-Development-Flow-Generation/dp/1935401009][The Principles of Product Development Flow - D. Reinertsen]]
+*** [[https://www.amazon.com/Personal-Kanban-Mapping-Work-Navigating/dp/1453802266][Personal Kanban - Jim Benson]]
+*** [[https://www.amazon.com/DevOps-Handbook-World-Class-Reliability-Organizations/dp/1942788002][The DevOps Handbook - Gene Kim, et al]]
+*** [[https://www.youtube.com/watch?v=N7oz366X0-8][The Cynefin Framework - Dave Snowden]] (youtube)
+*** [[https://www.youtube.com/watch?v=oyEtKpqqx_s][The Big Ideas Behind Lean Product Development - Don Reinertsen]] (youtube)

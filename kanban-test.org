@@ -1,0 +1,11 @@
+* My Kanban
+** Backlog
+*** TODO Take out the fish
+*** TODO Walk the trash
+*** TODO Feed the dog
+** Ready
+*** TODO Announce initial org-kanban
+** Doing
+*** TODO Test org-kanban
+** Done
+*** DONE Tested refile
