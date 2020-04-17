@@ -103,3 +103,7 @@ org-refile-targets to a locally useful value."
 (defun org-kanban ()
   (interactive)
   (org-kanban--init-window (org-kanban--get-states)))
+
+(provide 'org-kanban)
+
+;;; org-kanban.el ends here
